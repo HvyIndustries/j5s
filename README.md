@@ -21,7 +21,7 @@
 <p align="center">
   <img
     width="400"
-    src="https://raw.githubusercontent.com/HvyIndustries/j5s/master/assets/preview.gif"
+    src="https://raw.githubusercontent.com/HvyIndustries/j5s/master/assets/j5s-preview1.gif"
     alt="Demo of j5s running in the terminal"
   />
   <br>
