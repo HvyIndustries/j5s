@@ -73,7 +73,7 @@ $ j5s connect
 
 The `connect` command will validate that your Jenkins base URL is correct and that your credentials work.
 
-Once completed, you're ready to start using j5s! Read on to learn more about the [available commands](#commands)
+Once completed, you're ready to start using j5s! Read on to learn more about the [available commands](#commands-overview)
 
 
 ## Documentation
