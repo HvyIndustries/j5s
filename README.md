@@ -24,8 +24,6 @@
     src="https://raw.githubusercontent.com/HvyIndustries/j5s/master/assets/j5s-preview1.gif"
     alt="Demo of j5s running in the terminal"
   />
-  <br>
-  <sub><sup><code>j5s</code> is proprietary, closed-source software.<sub><sup>
 </p>
 
 <hr>
@@ -160,4 +158,9 @@ Something not working? Please [make a bug report](https://github.com/HvyIndustri
 ### Common problems
 
 todo
+
+
+## Where is the source code?
+
+j5s is not an open source project. This repository is for documentation and to be a public forum for users to request features and report bugs.
 
