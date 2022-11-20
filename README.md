@@ -59,17 +59,9 @@ $ j5s version
 
 ### Step 2 - Connect to Jenkins
 
-Create a j5s config file in your home directory:
+Run this command to start an interactive wizard:
 ```
-$ mkdirp ~/.config/
-$ touch ~/.config/j5s.toml
-```
-
-Open `~/.config/j5s.toml` with your favourite editor and paste this inside:
-```
-jenkins_base_url = ""
-user = ""
-api_token = ""
+$ j5s connect
 ```
 
 * Set `jenkins_base_url` to the main hostname of your Jenkins instance without a trailing slash (eg. `https://jenkins.hvy.io`)
@@ -79,16 +71,9 @@ api_token = ""
   * Give the token a recognisable name like `j5s`, and copy the value
   * Set the value of the token as `api_token` (eg. `45678912345afe234feff23`)
 
-> *NOTE: In future the connect step will be simplified by the addition of a `connect` command that will create the config file for you.*
+The `connect` command will validate that your Jenkins base URL is correct and that your credentials work.
 
-That's it, you're ready to start using `j5s`!
-
-For example:
-```
-$ j5s status my-job-name
-```
-
-[Learn more about the available commands](#commands)
+Once completed, you're ready to start using j5s! Read on to learn more about the [available commands](#commands)
 
 
 ## Documentation
@@ -126,6 +111,24 @@ $ j5s logs <search> [build_num] [-f]
 Searches for a Jenkins job matching `<search>` and displays all available logs. If the build is running and `-f` is passed, the logs will update every ~5 seconds until the build finishes.
 
 You can provide `[build_num]` to see the logs for a specific build of the matched job. If not provided, the most most recent build for the job will be used instead.
+
+
+#### `connect`
+
+Usage:
+```
+$ j5s connect
+```
+
+Starts an interactive wizard to help you connect to a Jenkins instance.
+
+Three fields are required:
+* `jenkins_base_url` -> the main hostname of your Jenkins instance without a trailing slash (eg. `https://jenkins.hvy.io`)
+* `user` -> your Jenkins username (eg. `john.stone`)
+* `api_token` -> your Jenkins API token. To create one:
+  * Open this URL in your browser `<jenkins_url>/me/configure` and create a new API token
+  * Give the token a recognisable name like `j5s`, and copy the value
+  * Set the value of the token as `api_token` (eg. `45678912345afe234feff23`)
 
 
 #### `version`
