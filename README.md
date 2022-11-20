@@ -40,9 +40,9 @@
 
 ### Step 1 - Download & install j5s
 
-Download the latest version of j5s from the [official releases page](https://github.com/HvyIndustries/j5s/releases).
+Download the latest version of j5s from the [official releases page](https://github.com/HvyIndustries/j5s/releases) and unzip the file.
 
-Open a terminal to the folder where you downloaded j5s and make the binary executable:
+Open a terminal to the folder where you downloaded j5s and make the unzipped binary executable:
 ```bash
 $ chmod +x j5s
 ```
