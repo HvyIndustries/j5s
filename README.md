@@ -140,7 +140,7 @@ Prints the installed version of `j5s`.
 
 ### Troubleshooting
 
-Something not working? Please [make a bug report](https://github.com/HvyIndustries/j5s/issues/choose) so that I can fix it.
+Something not working? Please [make a bug report](https://github.com/HvyIndustries/j5s/issues/new/choose) so that I can fix it.
 
 todo
 
