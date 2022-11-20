@@ -83,9 +83,17 @@ Once completed, you're ready to start using j5s! Read on to learn more about the
 `j5s` uses standard Jenkins APIs to fetch build status information. It should work with any version of Jenkins and does not require any special plugins to be installed.
 
 
-### Commands
+### Commands Overview
 
-#### `status`
+* [`status`](#command-status) - Show build status
+* [`logs`](#command-logs) - Show build logs
+* [`connect`](#command-connect) - Wizard to assist with first-time connection to Jenkins instance
+* [`version`](#command-version) - Display j5s version
+
+
+### Command Details
+
+#### Command: `status`
 
 Usage
 ```
@@ -100,8 +108,12 @@ This is quite useful if you are working on a branch with a Jenkins multibranch p
 
 If the Jenkins job is a declarative pipeline, the pipeline steps and their status will also be displayed.
 
+> **Search tip:** If you are searching for a job that exists in multiple folders or multibranch pipelines (such as `main`) you can make your search more specific by adding the name of the parent and wrapping it in quotes. For example `j5s status "ui main"` instead of `j5s status main`.
+>
+> If multiple jobs match your search, j5s will show you up to 10 matching jobs to choose from. If there are more than 10 matches, you need to make your search more specific.
 
-#### `logs`
+
+#### Command: `logs`
 
 Usage
 ```
@@ -113,14 +125,14 @@ Searches for a Jenkins job matching `<search>` and displays all available logs. 
 You can provide `[build_num]` to see the logs for a specific build of the matched job. If not provided, the most most recent build for the job will be used instead.
 
 
-#### `connect`
+#### Command: `connect`
 
 Usage:
 ```
 $ j5s connect
 ```
 
-Starts an interactive wizard to help you connect to a Jenkins instance.
+Starts an interactive wizard to help you connect to a Jenkins instance. Generally you only ever need to do this when first connecting to Jenkins, or if your username or API token have changed.
 
 Three fields are required:
 * `jenkins_base_url` -> the main hostname of your Jenkins instance without a trailing slash (eg. `https://jenkins.hvy.io`)
@@ -131,7 +143,7 @@ Three fields are required:
   * Set the value of the token as `api_token` (eg. `45678912345afe234feff23`)
 
 
-#### `version`
+#### Command: `version`
 
 Usage:
 ```
@@ -141,9 +153,11 @@ $ j5s version
 Prints the installed version of `j5s`.
 
 
-### Troubleshooting
+## Troubleshooting
 
 Something not working? Please [make a bug report](https://github.com/HvyIndustries/j5s/issues/new/choose) so that I can fix it.
+
+### Common problems
 
 todo
 
