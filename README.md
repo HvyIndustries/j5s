@@ -95,7 +95,7 @@ If you can access the Jenkins web UI, `j5s` will probably work for you.
 
 ### Command: `status`
 
-Usage
+**Usage**
 ```
 $ j5s status <search> [build_num] [-f]
 ```
@@ -140,7 +140,7 @@ You can provide a build number at the end of a search to see the logs for a spec
 
 ### Command: `list-jobs`
 
-Usage
+**Usage**
 ```
 $ j5s list-jobs [search]
 ```
@@ -154,7 +154,7 @@ If no `[search]` is provided, list all of the top-level configured jobs, folders
 
 ### Command: `list-builds`
 
-Usage
+**Usage**
 ```
 $ j5s list-builds <search> [-f]
 ```
@@ -167,9 +167,9 @@ Lists the last 50 builds for a job that matches `<search>`. If `-f` is passed, t
 * `j5s list-builds jobitem -f` -> List up to 50 last builds for the `jobitem` job, auto-update the list every ~5 seconds.
 
 
-#### Command: `configure`
+### Command: `configure`
 
-Usage:
+**Usage**
 ```
 $ j5s configure
 ```
@@ -185,9 +185,9 @@ Three fields are required:
   * Set the value of the token as `api_token` (eg. `45678912345afe234feff23`)
 
 
-#### Command: `version`
+### Command: `version`
 
-Usage:
+**Usage**
 ```
 $ j5s version
 ```
